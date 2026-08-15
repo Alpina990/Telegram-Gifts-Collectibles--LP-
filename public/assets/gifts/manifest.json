@@ -1,0 +1,83 @@
+[
+  {
+    "id": "5935895822435615975",
+    "title": "Collectible 01",
+    "status": "provided-archive",
+    "format": "tgs",
+    "asset": "/assets/gifts/5935895822435615975.tgs",
+    "webAsset": "/assets/gifts/5935895822435615975.json",
+    "preview": "/assets/gifts/5935895822435615975.png"
+  },
+  {
+    "id": "6046178578163303744",
+    "title": "Collectible 02",
+    "status": "provided-archive",
+    "format": "tgs",
+    "asset": "/assets/gifts/6046178578163303744.tgs",
+    "webAsset": "/assets/gifts/6046178578163303744.json",
+    "preview": "/assets/gifts/6046178578163303744.png"
+  },
+  {
+    "id": "5866352046986232958",
+    "title": "Collectible 03",
+    "status": "provided-archive",
+    "format": "tgs",
+    "asset": "/assets/gifts/5866352046986232958.tgs",
+    "webAsset": "/assets/gifts/5866352046986232958.json",
+    "preview": "/assets/gifts/5866352046986232958.png"
+  },
+  {
+    "id": "5956217000635139069",
+    "title": "Collectible 04",
+    "status": "provided-archive",
+    "format": "tgs",
+    "asset": "/assets/gifts/5956217000635139069.tgs",
+    "webAsset": "/assets/gifts/5956217000635139069.json",
+    "preview": "/assets/gifts/5956217000635139069.png"
+  },
+  {
+    "id": "6026193266406327981",
+    "title": "Collectible 05",
+    "status": "provided-archive",
+    "format": "tgs",
+    "asset": "/assets/gifts/6026193266406327981.tgs",
+    "webAsset": "/assets/gifts/6026193266406327981.json",
+    "preview": "/assets/gifts/6026193266406327981.png"
+  },
+  {
+    "id": "5969796561943660080",
+    "title": "Collectible 06",
+    "status": "provided-archive",
+    "format": "tgs",
+    "asset": "/assets/gifts/5969796561943660080.tgs",
+    "webAsset": "/assets/gifts/5969796561943660080.json",
+    "preview": "/assets/gifts/5969796561943660080.png"
+  },
+  {
+    "id": "5893356958802511476",
+    "title": "Collectible 07",
+    "status": "provided-archive",
+    "format": "tgs",
+    "asset": "/assets/gifts/5893356958802511476.tgs",
+    "webAsset": "/assets/gifts/5893356958802511476.json",
+    "preview": "/assets/gifts/5893356958802511476.png"
+  },
+  {
+    "id": "5974210632977745012",
+    "title": "Collectible 08",
+    "status": "provided-archive",
+    "format": "tgs",
+    "asset": "/assets/gifts/5974210632977745012.tgs",
+    "webAsset": "/assets/gifts/5974210632977745012.json",
+    "preview": "/assets/gifts/5974210632977745012.png"
+  },
+  {
+    "id": "5170233102089322756",
+    "title": "Collectible 09",
+    "status": "provided-archive",
+    "format": "tgs",
+    "asset": "/assets/gifts/5170233102089322756.tgs",
+    "webAsset": "/assets/gifts/5170233102089322756.json",
+    "preview": "/assets/gifts/5170233102089322756.png"
+  }
+]
