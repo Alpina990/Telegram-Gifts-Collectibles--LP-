@@ -7,6 +7,14 @@ import "@fontsource/space-grotesk/700.css";
 import "./styles.css";
 
 const giftPageUrl = "https://starpay.uz/gift";
+const assetUrl = (path) => {
+  if (!path || /^(?:[a-z]+:)?\/\//i.test(path) || path.startsWith("data:") || path.startsWith("blob:")) {
+    return path;
+  }
+
+  return `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
+};
+
 lottie.setQuality("medium");
 
 const giftIds = [
@@ -26,12 +34,20 @@ const app = document.querySelector("#app");
 app.innerHTML = `
   <div class="page-fit">
   <section class="page-shell" aria-labelledby="page-title">
-    <img class="ambient-background" src="/assets/decor/TIJnO.png" alt="" aria-hidden="true" />
+    <div class="ambient-background" aria-hidden="true">
+      <div class="ambient-scene">
+        <img class="ambient-scene__base" src="${assetUrl("assets/decor/ambient-base.webp")}" alt="" />
+        <img class="ambient-decor ambient-decor--telegram-upper" src="${assetUrl("assets/decor/yEabu.png")}" alt="" />
+        <img class="ambient-decor ambient-decor--gift" src="${assetUrl("assets/decor/iymo9.png")}" alt="" />
+        <img class="ambient-decor ambient-decor--star" src="${assetUrl("assets/decor/Y0vxbQ.png")}" alt="" />
+        <img class="ambient-decor ambient-decor--telegram-lower" src="${assetUrl("assets/decor/i8uMOW.png")}" alt="" />
+      </div>
+    </div>
 
     <div class="main-content">
       <header class="brand-header">
         <a class="brand-lockup" href="${giftPageUrl}" aria-label="StarPay gift sahifasiga o‘tish">
-          <img class="brand-star" src="/assets/brand/starpay-icon-official.png" alt="" aria-hidden="true" />
+          <img class="brand-star" src="${assetUrl("assets/brand/starpay-icon-official.png")}" alt="" aria-hidden="true" />
           <strong>StarPay</strong>
         </a>
       </header>
@@ -49,23 +65,22 @@ app.innerHTML = `
       <section class="payments" aria-labelledby="payments-title">
         <div class="section-heading">
           <h2 id="payments-title">To‘lov usullari</h2>
-          <span>qulayini tanlang</span>
         </div>
         <div class="payment-grid">
           <a class="payment-card" href="${giftPageUrl}" aria-label="Click orqali kolleksiya olish">
-            <img src="/assets/payments/click.svg" alt="Click" />
+            <img src="${assetUrl("assets/payments/click.svg")}" alt="Click" />
             <small>Click</small>
           </a>
           <a class="payment-card" href="${giftPageUrl}" aria-label="Payme orqali kolleksiya olish">
-            <img src="/assets/payments/payme.png" alt="Payme" />
+            <img src="${assetUrl("assets/payments/payme.png")}" alt="Payme" />
             <small>Payme</small>
           </a>
           <a class="payment-card" href="${giftPageUrl}" aria-label="Uzum orqali kolleksiya olish">
-            <img src="/assets/payments/uzum.svg" alt="Uzum" />
+            <img src="${assetUrl("assets/payments/uzum.svg")}" alt="Uzum" />
             <small>Uzum</small>
           </a>
           <a class="payment-card" href="${giftPageUrl}" aria-label="Uzcard yoki Humo orqali kolleksiya olish">
-            <img src="/assets/payments/uzcard-humo.png" alt="Uzcard va Humo" />
+            <img src="${assetUrl("assets/payments/uzcard-humo.png")}" alt="Uzcard va Humo" />
             <small>Uzcard / Humo</small>
           </a>
         </div>
@@ -74,8 +89,23 @@ app.innerHTML = `
 
     <footer class="checkout">
       <a class="primary-cta" href="${giftPageUrl}" aria-label="Kolleksiyalarga o‘tish">
+        <svg class="primary-cta__sparkle primary-cta__sparkle--one" aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M12 0C12 6.627 17.373 12 24 12C17.373 12 12 17.373 12 24C12 17.373 6.627 12 0 12C6.627 12 12 6.627 12 0Z" />
+        </svg>
+        <svg class="primary-cta__sparkle primary-cta__sparkle--two" aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M12 0C12 6.627 17.373 12 24 12C17.373 12 12 17.373 12 24C12 17.373 6.627 12 0 12C6.627 12 12 6.627 12 0Z" />
+        </svg>
+        <svg class="primary-cta__sparkle primary-cta__sparkle--three" aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M12 0C12 6.627 17.373 12 24 12C17.373 12 12 17.373 12 24C12 17.373 6.627 12 0 12C6.627 12 12 6.627 12 0Z" />
+        </svg>
+        <svg class="primary-cta__sparkle primary-cta__sparkle--four" aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M12 0C12 6.627 17.373 12 24 12C17.373 12 12 17.373 12 24C12 17.373 6.627 12 0 12C6.627 12 12 6.627 12 0Z" />
+        </svg>
+        <svg class="primary-cta__sparkle primary-cta__sparkle--five" aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M12 0C12 6.627 17.373 12 24 12C17.373 12 12 17.373 12 24C12 17.373 6.627 12 0 12C6.627 12 12 6.627 12 0Z" />
+        </svg>
         <span>Kolleksiyalarga o‘tish</span>
-        <svg aria-hidden="true" viewBox="0 0 14 14">
+        <svg class="primary-cta__arrow" aria-hidden="true" viewBox="0 0 14 14">
           <path d="M6.90088 2.35156q-.18115.02734-.32129.16748-.11279.11279-.14697.28028-.03418.16748.02051.32129.02734.08545.25976.3247.23242.23584 1.36377 1.37061 1.58252 1.58252 1.58252 1.59619 0 .01367-3.45557.01367H2.75822l-.08545.04102q-.22217.11279-.30078.33838-.0752.22217.00684.43408.05811.0957.14013.18115.08545.08203.16748.11963.08545.03418.53321.03418h3.01123q3.42822 0 3.42822.01367 0 .01367-1.58252 1.59619-1.13135 1.13477-1.36377 1.37402-.23242.23584-.25976.3213-.05469.15381-.02051.32128.03418.16748.14697.28028.18115.18115.42041.18115h.04102q.11279 0 .19824-.05469.14014-.09912.51611-.46484l1.68164-1.67822q2.1123-2.10205 2.15332-2.18409.07178-.12646.07178-.28027t-.07178-.28027q-.04102-.08203-2.1499-2.18067-2.10547-2.10205-2.17725-2.13623-.06836-.0376-.23584-.06494-.04102 0-.12646.01367Z" />
         </svg>
       </a>
@@ -96,7 +126,15 @@ function fitPageToViewport() {
   const viewportWidth = window.visualViewport?.width || window.innerWidth;
   const viewportHeight = window.visualViewport?.height || window.innerHeight;
   const scale = Math.min(viewportWidth / 390, viewportHeight / 844, 1);
+  const useFullscreenLayout = viewportWidth <= 600;
+  const layoutWidth = useFullscreenLayout ? viewportWidth / scale : 390;
+  const layoutHeight = useFullscreenLayout ? viewportHeight / scale : 844;
+
   pageFit.style.setProperty("--page-scale", String(scale));
+  pageFit.style.setProperty("--ambient-cover-scale", String(Math.max(layoutWidth / 390, layoutHeight / 844)));
+  pageFit.classList.toggle("is-fullscreen", useFullscreenLayout);
+  pageFit.style.width = `${layoutWidth}px`;
+  pageFit.style.height = `${layoutHeight}px`;
 }
 
 fitPageToViewport();
@@ -126,7 +164,7 @@ function mountMedia(card, gift) {
   if (gift.preview) {
     const fallback = document.createElement("img");
     fallback.className = "gift-fallback";
-    fallback.src = gift.preview;
+    fallback.src = assetUrl(gift.preview);
     fallback.alt = "";
     fallback.setAttribute("aria-hidden", "true");
     container.append(fallback);
@@ -147,7 +185,7 @@ function mountMedia(card, gift) {
       renderer: "canvas",
       loop: false,
       autoplay: false,
-      path: gift.webAsset,
+      path: assetUrl(gift.webAsset),
       rendererSettings: {
         preserveAspectRatio: "xMidYMid meet",
         clearCanvas: true,
@@ -168,7 +206,7 @@ function mountMedia(card, gift) {
 
   if (gift.format === "webm" && gift.asset) {
     const video = document.createElement("video");
-    video.src = gift.asset;
+    video.src = assetUrl(gift.asset);
     video.autoplay = true;
     video.loop = true;
     video.muted = true;
@@ -182,7 +220,7 @@ function mountMedia(card, gift) {
   if (gift.asset) {
     const image = document.createElement("img");
     image.className = "gift-fallback";
-    image.src = gift.asset;
+    image.src = assetUrl(gift.asset);
     image.alt = "";
     container.append(image);
     return;
@@ -195,7 +233,7 @@ function mountMedia(card, gift) {
 async function renderGifts() {
   let manifest = [];
   try {
-    const response = await fetch("/assets/gifts/manifest.json", { cache: "no-store" });
+    const response = await fetch(assetUrl("assets/gifts/manifest.json"), { cache: "no-store" });
     if (!response.ok) throw new Error(`Manifest ${response.status}`);
     manifest = await response.json();
   } catch {
